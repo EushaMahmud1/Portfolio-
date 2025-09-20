@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eusha Mahmud — Professional Portfolio</title>
+  <meta name="description" content="Portfolio of Eusha Mahmud — Aspiring International Business student with a Computer Science & Engineering background." />
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7; /* soft mint */
+      --accent-2:#60a5fa;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg,#071023 0%, #0f1724 100%); color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; padding:32px; display:flex; justify-content:center;
+    }
+    .container{width:100%; max-width:1000px}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#06202b;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(12,18,28,0.6)}
+    h1{margin:0;font-size:20px}
+    .nav{display:flex;gap:12px}
+    .nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px 12px;border-radius:10px}
+    .nav a:hover{background:var(--glass);color:var(--accent)}
+
+    .grid{display:grid;grid-template-columns:320px 1fr;gap:24px}
+
+    /* Sidebar */
+    .sidebar{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);backdrop-filter: blur(6px)}
+    .avatar{width:100%;display:flex;justify-content:center}
+    .avatar svg{width:160px;height:160px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px}
+    .name{text-align:center;margin-top:14px}
+    .name h2{margin:0;font-size:20px}
+    .name p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .contact{margin-top:18px}
+    .contact p{margin:10px 0;color:var(--muted);font-size:14px}
+    .contact a{color:var(--accent);text-decoration:none}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:14px}
+
+    /* Main */
+    main{min-height:420px}
+    .hero{display:flex;align-items:flex-start;gap:18px}
+    .tag{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:6px 10px;border-radius:999px;color:#022; font-weight:600;font-size:13px}
+    .headline{margin:0}
+    .headline h2{margin:0;font-size:26px}
+    .headline p{margin:8px 0 0;color:var(--muted);line-height:1.45}
+
+    section{margin-top:18px}
+    h3{margin:0 0 12px 0;font-size:18px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    .skill{margin-bottom:12px}
+    .skill label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    .bar{height:10px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden}
+    .bar > span{display:block;height:100%;border-radius:999px}
+    .prog-80{width:80%;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+    .prog-65{width:65%;background:linear-gradient(90deg,var(--accent),#9ad3ff)}
+    .prog-50{width:50%;background:linear-gradient(90deg,#9ad3ff,#c7f9e8)}
+
+    .projects .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);margin-bottom:12px}
+    .meta{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      .logo{width:56px;height:56px}
+    }
+
+    /* print */
+    @media print{
+      body{background:white;color:black;padding:0}
+      .container{max-width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">EM</div>
+        <div>
+          <h1>Eusha Mahmud</h1>
+          <div style="color:var(--muted);font-size:13px">Aspiring International Business Student • Computer Science & Engineering</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <aside class="sidebar">
+        <div class="avatar">
+          <!-- simple SVG avatar -->
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#6ee7b7" />
+                <stop offset="1" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+            <rect width="200" height="200" rx="20" fill="#071026" />
+            <g transform="translate(40,30)" fill="white" fill-opacity="0.9">
+              <circle cx="60" cy="50" r="36" fill="url(#g)" />
+              <rect x="10" y="110" width="100" height="30" rx="8" fill="#071026" />
+              <path d="M0 160 Q60 120 120 160" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+            </g>
+          </svg>
+        </div>
+        <div class="name">
+          <h2>Eusha Mahmud</h2>
+          <p>Computer Science & Engineering — 2nd year</p>
+        </div>
+
+        <div class="contact card" style="margin-top:18px">
+          <h3 style="font-size:15px">Contact</h3>
+          <p class="meta">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+          <p class="meta">Location: Bangladesh</p>
+          <p class="meta">Available for study, internships & part-time roles</p>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3 style="font-size:15px">Quick Facts</h3>
+          <p class="meta">• Strong English communication & speaking</p>
+          <p class="meta">• Comfortable learning new practical skills (barista, teaching)</p>
+          <p class="meta">• Experienced in academic programming and problem-solving</p>
+        </div>
+
+      </aside>
+
+      <main>
+        <section class="card hero">
+          <div style="flex:1">
+            <div class="tag">Open to opportunities</div>
+            <div class="headline">
+              <h2>Combining technical skills with business ambition</h2>
+              <p>I am a second-year Computer Science & Engineering student with a growing interest in international business and entrepreneurship. I apply analytical thinking from engineering to solve real-world trade and market problems, with a long-term goal of building sustainable export businesses.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="card" style="margin-top:18px">
+          <h3>About Me</h3>
+          <p style="color:var(--muted)">I am passionate about building practical bridges between production in Bangladesh and markets abroad. With a technical foundation in programming and algorithms, I am learning business fundamentals and market research to launch an export-focused venture in the future. I adapt quickly to new environments and enjoy working on cross-functional teams.</p>
+        </section>
+
+        <section id="skills" class="card">
+          <h3>Skills</h3>
+          <div class="two-col">
+            <div>
+              <div class="skill">
+                <label>Programming & Algorithms</label>
+                <div class="bar"><span class="prog-80"></span></div>
+              </div>
+              <div class="skill">
+                <label>Analytical & Strategic Thinking</label>
+                <div class="bar"><span class="prog-65"></span></div>
+              </div>
+              <div class="skill">
+                <label>Communication & Presentation</label>
+                <div class="bar"><span class="prog-80"></span></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill">
+                <label>Market Research & Business Planning</label>
+                <div class="bar"><span class="prog-50"></span></div>
+              </div>
+              <div class="skill">
+                <label>Teaching & Customer Service</label>
+                <div class="bar"><span class="prog-65"></span></div>
+              </div>
+              <div class="skill">
+                <label>Adaptability & Teamwork</label>
+                <div class="bar"><span class="prog-80"></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="education" class="card">
+          <h3>Education</h3>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+            <div>
+              <strong>Bachelor of Science — Computer Science & Engineering</strong>
+              <div class="meta">Private University, Bangladesh • 2023 – Present</div>
+              <p style="color:var(--muted);margin-top:8px">Focused on core programming, algorithms, and problem-solving. Emphasizes practical projects and analytical thinking.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="card projects">
+          <h3>Projects & Experience</h3>
+
+          <div class="project">
+            <strong>Academic Programming Projects</strong>
+            <div class="meta">Algorithms, data-structures & problem-solving (C++)</div>
+            <p style="color:var(--muted);margin-top:8px">Worked on coursework and practice problems that strengthened algorithmic thinking and implementation skills. Comfortable with competitive-style problem solving and debugging.</p>
+          </div>
+
+          <div class="project">
+            <strong>Entrepreneurial Plan (Concept)</strong>
+            <div class="meta">Product research • Market fit • Export strategy</div>
+            <p style="color:var(--muted);margin-top:8px">Developing a long-term plan to export Bangladeshi agricultural and garment products to international markets. Focus areas include sourcing reliability, cost-competitiveness, and building sustainable trade relationships.</p>
+          </div>
+
+          <div class="project">
+            <strong>Teaching & Service Experience (Interest)</strong>
+            <div class="meta">English teaching • Customer-facing roles</div>
+            <p style="color:var(--muted);margin-top:8px">Interested in teaching English and learning customer-service skills (e.g., barista work) to improve communication, earn income, and gain real-world experience while studying.</p>
+          </div>
+
+        </section>
+
+        <section id="goals" class="card">
+          <h3>Goals</h3>
+          <ul style="color:var(--muted);margin:8px 0 0 18px">
+            <li>Gain practical business experience through internships and part-time roles.</li>
+            <li>Work in multinational settings to build global perspective and networks.</li>
+            <li>Launch an export business from Bangladesh that focuses on rice, garments, and dairy with affordability and sustainability in mind.</li>
+            <li>Continue improving technical and communication skills to bridge engineering and business.</li>
+          </ul>
+        </section>
+
+        <section id="contact" class="card">
+          <h3>Get in touch</h3>
+          <p style="color:var(--muted)">If you'd like to collaborate, hire for internships, or discuss projects, email me at <a href="mailto:youremail@example.com">youremail@example.com</a> — or download this portfolio for offline use (Print friendly).</p>
+          <div style="margin-top:12px;display:flex;gap:10px">
+            <a href="#" onclick="window.print();return false;" style="padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021; font-weight:700;text-decoration:none">Print / Save PDF</a>
+            <a href="#" onclick="location.href='mailto:youremail@example.com'" style="padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.04);color:var(--muted);text-decoration:none">Contact</a>
+          </div>
+        </section>
+
+        <footer>
+          Created by Eusha Mahmud • Portfolio generated for professional and academic use
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
